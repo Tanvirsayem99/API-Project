@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API-Project</title>
+  <!-- important source -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- header start -->
+  <header>
+
+    <!-- navbar start -->
+
+    <nav class="flex w-11/12 mx-auto justify-between my-5">
+      <img src="images/Tasty_HUT.png" alt="">
+      <button class="bg-yellow-400 px-3 py-1 rounded-md font-semibold">Sign Up</button>
+    </nav>
+
+    <!-- navbar end -->
+
+    <!-- search section start -->
+
+    <section class="search-section flex flex-col items-center justify-center">
+      <h1 class="text-white text-5xl font-semibold text-center">Taste Our Delicious <br> Best Foods</h1>
+      <p class="text-white text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi soluta aliquid aut <br> voluptatibus obcaecati rem consequatur ut autem quisquam pariatur?</p>
+      <div class=""><input id="value" type="text" placeholder="search your food" class=" mt-5 px-2 py-1 rounded-l-md"><button onclick="search()" class="bg-yellow-400 px-3 py-1 rounded-r-md font-semibold">Search</button></div>
+    </section>
+
+    <!-- search section end -->
+  </header>
+
+  <!-- main section start -->
+
+  <main class="w-11/12 mx-auto">
+    <div>
+      <h3 class="text-center font-semibold text-2xl mt-20 mb-10">Your Favourite Food</h3>
+    </div>
+
+    <div class="w-11/12 mx-auto grid md:grid-cols-2 gap-5" id="main">
+      
+    </div>
+    
+  </main>
+
+    <!-- main section end -->
+
+    <div class="md:w-1/12 mx-auto my-20 w-3/12 ">
+      <button class="bg-yellow-400 px-3 py-1 rounded-md font-semibold" onclick="showAllDataTogether()">Show All</button>
+    </div>
+
+
+
+    <!-- modal-->
+
+    <input type="checkbox" id="my-modal" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg" id="modal-title">Congratulations random Internet user!</h3>
+        <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+        <div class="modal-action">
+          <label for="my-modal" class="btn">Yay!</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+
+    <!-- footer start -->
+
+    <footer class="bg-orange-50">
+      <section class="flex md:w-5/6 mx-auto justify-between gap-5 py-24 flex-col md:flex-row w-2/4 text-center items-center md:text-left">
+        <div>
+          <b>Section</b>
+          <p>Home</p>
+          <p>Features</p>
+          <p>Pricing</p>
+          <p>FAQs</p>
+          <p>About</p>
+        </div>
+        <div>
+          <b>Section</b>
+          <p>UIUX Design</p>
+          <p>Back End Developer</p>
+          <p>Front End Developer</p>
+          <p>Product Design</p>
+        </div>
+        <div>
+          <b>Resource</b>
+          <p>FAQ</p>
+          <p>Support</p>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+        </div>
+        <div>
+          <b>Subscribe to our newsletter</b>
+          <p>There are many variations of passages of available <br> but the majority have suffered</p>
+          <input type="text" placeholder="Email address" class="my-5 rounded-md border pl-2 py-1"> <button class="bg-yellow-400 px-3 py-1 rounded-md font-semibold">Subscribe</button>
+        </div>
+      </section>
+    </footer>
+
+    <!-- footer end -->
+
+
+  <!-- important-js-source -->
+  <script src="style.js"></script>
+</body>
+</html>

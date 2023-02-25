@@ -1,0 +1,8 @@
+.search-section{
+    background-image: url('images/banner_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    filter: brightness(60%);
+    
+}
