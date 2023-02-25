@@ -20,7 +20,7 @@ const displayItem = foods =>{
         <div class="bg-slate-100">
           <h4 class="font-semibold text-center py-5">${food.strMeal}</h4>
           <p class="text-sm pl-3 pb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, eius.</p>
-          <label for="my-modal"><a class="pl-3 text-orange-500 " onclick="modal()">view Details</a></label>
+          <label for="my-modal"><a class="pl-3 text-orange-500 " onclick="modal(${food.idMeal})">view Details</a></label>
     </div>
     `;
     parent.appendChild(div);
@@ -46,9 +46,25 @@ const search = () =>{
    
 }
 
-const modal = () =>{
-  const title = document.getElementById('modal-title').innerText;
-  title = food.strMeal;
+const modal = (sayem) =>{
+  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${sayem}`;
+  fetch(url)
+  .then(res => res.json())
+  .then(data => displayModal(data.meals[0]))
+  
+  
+}
+
+const displayModal = (Details) =>{
+   document.getElementById('modal-title').innerText = Details.strMeal;
+   const modalImg = document.getElementById('modal-title');
+
+   modalImg.innerHTML = `
+   <img src="${Details.strMealThumb}" class="w-5/6 mx-auto" >
+   `
+
+
+   
 }
 
 loadMeals('chicken')
